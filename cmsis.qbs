@@ -27,8 +27,8 @@ Project {
                 "-ffunction-sections", "-fdata-sections",
                 "-fno-common", "-fno-strict-aliasing",
             ]
-            cpp.driverFlags: ["--specs=nano.specs"]
-            cpp.linkerFlags: ["-nostartfiles", "--gc-sections"];
+            cpp.driverFlags: ["--specs=nano.specs", "-nostartfiles"]
+            cpp.linkerFlags: ["--gc-sections"];
             cpp.includePaths: ["Include"]
         }
     }
