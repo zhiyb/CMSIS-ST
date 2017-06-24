@@ -27,11 +27,8 @@ Project {
                 "-ffunction-sections", "-fdata-sections",
                 "-fno-common", "-fno-strict-aliasing",
             ]
-            cpp.linkerFlags: ["-nostartfiles",
-                "--specs=nano.specs",
-                "-Wl,--gc-sections"];
-            cpp.assemblerName: "gcc"
-            cpp.assemblerFlags: cpp.commonCompilerFlags.concat("-c")
+            cpp.driverFlags: ["--specs=nano.specs"]
+            cpp.linkerFlags: ["-nostartfiles", "--gc-sections"];
             cpp.includePaths: ["Include"]
         }
     }
