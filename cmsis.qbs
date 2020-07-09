@@ -26,9 +26,10 @@ Project {
             cpp.commonCompilerFlags: [
                 "-ffunction-sections", "-fdata-sections",
                 "-fno-common", "-fno-strict-aliasing",
+                "-ffast-math",
             ]
-            //cpp.driverFlags: ["--specs=nano.specs"]
             cpp.linkerFlags: ["--gc-sections"]
+            cpp.driverLinkerFlags: ["--specs=nano.specs"]
             cpp.includePaths: ["Include"]
         }
     }
